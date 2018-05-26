@@ -39,4 +39,4 @@ test: off
 #---------------------------------#
 
 artifacts:
-- path: artifacts/Serilog.*.nupkg
+- path: artifacts/*.nupkg
