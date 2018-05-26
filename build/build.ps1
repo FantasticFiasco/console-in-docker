@@ -28,12 +28,12 @@ Write-Host "build: Packaging project in $source"
 if ($suffix -eq "")
 {
     & dotnet build -c Release
-    & dotnet pack -c Release --include-symbols -o ..\..\artifacts --no-build
+    & dotnet pack -c Release --include-symbols -o ..\artifacts --no-build
 }
 else
 {
     & dotnet build -c Release --version-suffix=$suffix
-    & dotnet pack -c Release --include-symbols -o ..\..\artifacts --version-suffix=$suffix --no-build
+    & dotnet pack -c Release --include-symbols -o ..\artifacts --version-suffix=$suffix --no-build
 }
 
 if ($LASTEXITCODE -ne 0)
