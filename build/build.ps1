@@ -21,30 +21,27 @@ $suffix = @{ $true = ""; $false = "$branch-$revision"}[$branch -eq "master" -and
 Write-Host "build: Version suffix is '$suffix'"
 
 # Build and pack
-foreach ($source in Get-ChildItem .\src\*)
+Push-Location ./src/
+
+Write-Host "build: Packaging project in $source"
+
+if ($suffix -eq "")
 {
-    Push-Location $source
-
-    Write-Host "build: Packaging project in $source"
-
-    if ($suffix -eq "")
-    {
-        & dotnet build -c Release
-        & dotnet pack -c Release --include-symbols -o ..\..\artifacts --no-build
-    }
-    else
-    {
-        & dotnet build -c Release --version-suffix=$suffix
-        & dotnet pack -c Release --include-symbols -o ..\..\artifacts --version-suffix=$suffix --no-build
-    }
-    
-    if ($LASTEXITCODE -ne 0)
-    {
-        exit 1
-    }    
-
-    Pop-Location
+    & dotnet build -c Release
+    & dotnet pack -c Release --include-symbols -o ..\..\artifacts --no-build
 }
+else
+{
+    & dotnet build -c Release --version-suffix=$suffix
+    & dotnet pack -c Release --include-symbols -o ..\..\artifacts --version-suffix=$suffix --no-build
+}
+
+if ($LASTEXITCODE -ne 0)
+{
+    exit 1
+}    
+
+Pop-Location
 
 # Push
 if ($env:APPVEYOR_REPO_TAG -eq "true")
