@@ -21,9 +21,9 @@ $suffix = @{ $true = ""; $false = "$branch-$revision"}[$branch -eq "master" -and
 Write-Host "build: Version suffix is '$suffix'"
 
 # Build and pack
-Push-Location ./src/
+Push-Location ./src
 
-Write-Host "build: Packaging project in $source"
+Write-Host "build: Packaging project in ./src"
 
 if ($suffix -eq "")
 {
