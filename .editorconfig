@@ -61,11 +61,19 @@ csharp_new_line_before_members_in_anonymous_types = true
 [*.csproj]
 indent_style = space
 indent_size = 2
+insert_final_newline = true
 
 [*.json]
 indent_style = space
 indent_size = 2
+insert_final_newline = true
+
+[*.md]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
 
 [*.{yaml,yml}]
 indent_style = space
 indent_size = 2
+insert_final_newline = true
