@@ -7,10 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{46D3CEB3-145
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleInDocker", "src\ConsoleInDocker.csproj", "{CA665AC0-B4A9-4E57-AA89-5830511D3CA8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3A696D22-EADF-4D63-8536-E71472C53CC4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleInDocker.Test", "test\ConsoleInDocker.Test.csproj", "{F4D5E9B1-7694-47F2-A788-913BCF43C17A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,7 +21,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CA665AC0-B4A9-4E57-AA89-5830511D3CA8} = {46D3CEB3-1452-441E-9658-4524C03604C9}
-		{F4D5E9B1-7694-47F2-A788-913BCF43C17A} = {3A696D22-EADF-4D63-8536-E71472C53CC4}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CA665AC0-B4A9-4E57-AA89-5830511D3CA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -40,17 +35,5 @@ Global
 		{CA665AC0-B4A9-4E57-AA89-5830511D3CA8}.Release|x64.Build.0 = Release|Any CPU
 		{CA665AC0-B4A9-4E57-AA89-5830511D3CA8}.Release|x86.ActiveCfg = Release|Any CPU
 		{CA665AC0-B4A9-4E57-AA89-5830511D3CA8}.Release|x86.Build.0 = Release|Any CPU
-		{F4D5E9B1-7694-47F2-A788-913BCF43C17A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4D5E9B1-7694-47F2-A788-913BCF43C17A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4D5E9B1-7694-47F2-A788-913BCF43C17A}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{F4D5E9B1-7694-47F2-A788-913BCF43C17A}.Debug|x64.Build.0 = Debug|Any CPU
-		{F4D5E9B1-7694-47F2-A788-913BCF43C17A}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F4D5E9B1-7694-47F2-A788-913BCF43C17A}.Debug|x86.Build.0 = Debug|Any CPU
-		{F4D5E9B1-7694-47F2-A788-913BCF43C17A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4D5E9B1-7694-47F2-A788-913BCF43C17A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4D5E9B1-7694-47F2-A788-913BCF43C17A}.Release|x64.ActiveCfg = Release|Any CPU
-		{F4D5E9B1-7694-47F2-A788-913BCF43C17A}.Release|x64.Build.0 = Release|Any CPU
-		{F4D5E9B1-7694-47F2-A788-913BCF43C17A}.Release|x86.ActiveCfg = Release|Any CPU
-		{F4D5E9B1-7694-47F2-A788-913BCF43C17A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

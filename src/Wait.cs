@@ -14,56 +14,24 @@ namespace ConsoleInDocker
         /// </summary>
         public static void ForShutdown()
         {
-            ForShutdownAsync().GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// Returns a <see cref="Task"/> that completes when shutdown is triggered via the given token, Ctrl+C or
-        /// SIGTERM.
-        /// </summary>
-        /// <param name="token">The token to trigger shutdown.</param>
-        public static Task ForShutdownAsync(CancellationToken token = default(CancellationToken))
-        {
             var done = new ManualResetEventSlim(false);
             
-            using (var cts = CancellationTokenSource.CreateLinkedTokenSource(token))
-            {
-                AttachCtrlcSigtermShutdown(cts, done);
-
-                done.Set();
-            }
-        }
-
-        private static void AttachCtrlcSigtermShutdown(
-            CancellationTokenSource cts,
-            ManualResetEventSlim resetEvent)
-        {
             void Shutdown()
             {
-                if (!cts.IsCancellationRequested)
-                {
-                    try
-                    {
-                        cts.Cancel();
-                    }
-                    catch (ObjectDisposedException)
-                    {
-                    }
-                }
+                done.Set();
+            };
 
-                // Wait on the given reset event
-                resetEvent.Wait();
-            }
-
-            AppDomain.CurrentDomain.ProcessExit += (sender, eventArgs) => Shutdown();
+            AppDomain.CurrentDomain.ProcessExit += (sender, e) => Shutdown();
             
-            Console.CancelKeyPress += (sender, eventArgs) =>
+            Console.CancelKeyPress += (sender, e) =>
             {
                 Shutdown();
                 
-                // Don't terminate the process immediately, wait for the Main thread to exit gracefully.
-                eventArgs.Cancel = true;
+                // Don't terminate the process immediately, wait for the main thread to exit gracefully
+                e.Cancel = true;
             };
+
+            done.Wait();
         }
     }
 }
