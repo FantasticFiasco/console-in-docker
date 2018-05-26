@@ -1,7 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <VersionPrefix>0.0.1</VersionPrefix>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <Description>A library helping .NET developers to build console applications in Docker.</Description>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Authors>Mattias Kindborg</Authors>
+    <PackageId>ConsoleInDocker</PackageId>
+    <PackageTags>console;docker</PackageTags>
+    <PackageProjectUrl>hhttps://github.com/FantasticFiasco/console-in-docker</PackageProjectUrl>
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageReleaseNotes>For release notes, please see the change log on GitHub.</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
