@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace ConsoleInDocker
 {
@@ -15,18 +14,18 @@ namespace ConsoleInDocker
         public static void ForShutdown()
         {
             var done = new ManualResetEventSlim(false);
-            
+
             void Shutdown()
             {
                 done.Set();
-            };
+            }
 
             AppDomain.CurrentDomain.ProcessExit += (sender, e) => Shutdown();
-            
+
             Console.CancelKeyPress += (sender, e) =>
             {
                 Shutdown();
-                
+
                 // Don't terminate the process immediately, wait for the main thread to exit gracefully
                 e.Cancel = true;
             };
