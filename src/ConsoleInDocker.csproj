@@ -9,7 +9,7 @@
     <Authors>Mattias Kindborg</Authors>
     <PackageId>ConsoleInDocker</PackageId>
     <PackageTags>console;docker</PackageTags>
-    <PackageProjectUrl>hhttps://github.com/FantasticFiasco/console-in-docker</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/FantasticFiasco/console-in-docker</PackageProjectUrl>
     <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
     <PackageReleaseNotes>For release notes, please see the change log on GitHub.</PackageReleaseNotes>
   </PropertyGroup>
