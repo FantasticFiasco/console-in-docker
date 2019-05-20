@@ -15,7 +15,7 @@ image: Visual Studio 2017
 # environment variables
 environment:
   NUGET_API_KEY:
-    secure: yMSTosOd+md735zBxHpaCUk5BmPL0MEpjNMwWNJklXYDHzOPpaXjIKBcqpDp5RtF
+    secure: apBA3TLQj6GaYymdAFP1AD67hqCKD/4+6YWJQU2sZ0hxddfcVCx5i8ZKQODbIzO/
 
 #---------------------------------#
 #       build configuration       #
