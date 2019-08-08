@@ -1,7 +1,7 @@
 # Console in Docker - A library helping .NET developers to build console applications in Docker
 
 [![Build status](https://ci.appveyor.com/api/projects/status/u0485194qofix1w3/branch/master?svg=true)](https://ci.appveyor.com/project/FantasticFiasco/console-in-docker/branch/master)
-[![NuGet Version](http://img.shields.io/nuget/v/ConsoleInDocker.svg?style=flat)](https://www.nuget.org/packages/ConsoleInDocker/) 
+[![NuGet Version](http://img.shields.io/nuget/v/ConsoleInDocker.svg?style=flat)](https://www.nuget.org/packages/ConsoleInDocker/) [![SemVer compatible](https://img.shields.io/badge/%E2%9C%85-SemVer%20compatible-blue)](https://semver.org/)
 
 __Package__ - [ConsoleInDocker](https://www.nuget.org/packages/consoleindocker)
 | __Platforms__ - .NET Standard 2.0
