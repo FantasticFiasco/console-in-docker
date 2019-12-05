@@ -10,7 +10,7 @@
     <PackageId>ConsoleInDocker</PackageId>
     <PackageTags>console;docker</PackageTags>
     <PackageProjectUrl>https://github.com/FantasticFiasco/console-in-docker</PackageProjectUrl>
-    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageReleaseNotes>For release notes, please see the change log on GitHub.</PackageReleaseNotes>
   </PropertyGroup>
 
