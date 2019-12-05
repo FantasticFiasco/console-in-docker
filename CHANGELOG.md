@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/) and is followi
 
 ## Unreleased
 
+## [1.0.1] - 2019-12-05
+
+### Fixed
+
+- Replace NuGet license URL with license expression
+
 ## [1.0.0] - 2018-05-27
 
 Initial version
