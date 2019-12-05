@@ -12,6 +12,7 @@
     <PackageProjectUrl>https://github.com/FantasticFiasco/console-in-docker</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageReleaseNotes>For release notes, please see the change log on GitHub.</PackageReleaseNotes>
+    <NoWarn>NU5105</NoWarn>
   </PropertyGroup>
 
 </Project>
